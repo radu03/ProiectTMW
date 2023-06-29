@@ -1,0 +1,43 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
+             x:Class="YourNamespace.JokePage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Double tap to delete"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Margin="0,10,0,0" />
+
+            <controls:ListView x:Name="jokeListView">
+                <controls:ListView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:ViewCell>
+                            <Grid Padding="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0"
+                                       Text="{Binding setup}"
+                                       FontSize="18"
+                                       LineBreakMode="WordWrap"
+                                       VerticalOptions="Center" />
+
+                                <Label Grid.Row="1"
+                                       Text="{Binding punchline}"
+                                       FontSize="16"
+                                       LineBreakMode="WordWrap"
+                                       VerticalOptions="Center" />
+                            </Grid>
+                        </controls:ViewCell>
+                    </DataTemplate>
+                </controls:ListView.ItemTemplate>
+            </controls:ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

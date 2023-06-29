@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect.MainPage">
+    <ContentPage.Background>
+
+        <LinearGradientBrush EndPoint="1,0">
+            <GradientStop Color="MediumPurple"
+                          Offset="0.1" />
+            <GradientStop Color="CornflowerBlue"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+
+    </ContentPage.Background>
+
+
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            
+
+            <Label
+                Text=""
+                FontSize="32"
+                TextColor="WhiteSmoke"
+                HorizontalOptions="Center"
+                x:Name= "lbl1"/>
+
+            <Label
+                Text=""
+                FontSize="32"
+                TextColor="Yellow"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                x:Name= "lbl2"/>
+
+            <Button Text="Next Joke"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+               
+                BackgroundColor="Yellow"
+                TextColor="Black"
+                Clicked="Button_Clicked_1" />
+
+            <Button Text="Save Joke"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+               
+                BackgroundColor="Yellow"
+                TextColor="Black"
+                Clicked="Button_Clicked_2" />
+
+            <Button Text="View saved jokes"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+               
+                BackgroundColor="Yellow"
+                TextColor="Black"
+                Clicked="ViewJokesButton_Clicked" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
